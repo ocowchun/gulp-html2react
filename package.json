@@ -7,8 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react","jsx"
+    "react",
+    "jsx"
   ],
   "author": "ocowchun@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "~3.0.1",
+    "react-dom-pragma": "~1.0.0",
+    "react-tools": "~0.11.2",
+    "through2": "~0.6.3"
+  }
 }
