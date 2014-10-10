@@ -27,7 +27,7 @@ module.exports =  function(options) {
 		}
 
 		try {
-			file.contents = new Buffer(react_tools.transform(str, options));
+			file.contents = new Buffer(react.transform(str, options));
 			file.path = gutil.replaceExtension(filePath, '.js');
 			cb(null, file);
 		} catch (err) {
