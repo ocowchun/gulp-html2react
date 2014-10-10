@@ -31,7 +31,7 @@ module.exports =  function(options) {
 			file.path = gutil.replaceExtension(filePath, '.js');
 			cb(null, file);
 		} catch (err) {
-			cb(new gutil.PluginError('gulp-react', err, {
+			cb(new gutil.PluginError('gulp-html2react', err, {
 				fileName: filePath
 			}));
 		}
