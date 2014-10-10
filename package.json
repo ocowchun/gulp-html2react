@@ -12,6 +12,7 @@
   ],
   "author": "ocowchun@gmail.com",
   "license": "MIT",
+  "repository": "ocowchun/gulp-html2react",
   "dependencies": {
     "gulp-util": "~3.0.1",
     "react-dom-pragma": "~1.0.0",
