@@ -1,0 +1,14 @@
+{
+  "name": "gulp-html2react",
+  "version": "0.0.0",
+  "description": "compile html to react syntax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react","jsx"
+  ],
+  "author": "ocowchun@gmail.com",
+  "license": "MIT"
+}
