@@ -5,7 +5,7 @@ var through = require('through2');
 var react = require('react-tools');
 var reactDomPragma = require('react-dom-pragma');
 
-module.exports =  function(options) {
+module.exports = function(options) {
 	return through.obj(function(file, enc, cb) {
 		if (file.isNull()) {
 			cb(null, file);
@@ -21,9 +21,20 @@ module.exports =  function(options) {
 		var filePath = file.path;
 
 		if (path.extname(filePath) === '.html') {
+			//add require
+			var re = /(?:\<\!\-\-([\S\s])*?)\-\-\>/gm;
+			var comments = str.match(re);
+			var requires = ['var React = require("react");'];
+			var max=!!comments?comments.length:0;
+			for (var i = 0 ;i < max; i++) {
+				var comment = comments[i];
+				requires.push(comment.replace('<!--', '').replace('-->', ''));
+				str = str.replace(comment, '');
+			}
 
-			str= " var React = require('react'); \n module.exports =function(){return ("+str +");};";
+			str = requires.join('\n') + '\nmodule.exports =function(){return (' + str + ');};';
 			str = reactDomPragma(str);
+			console.log(str)
 		}
 
 		try {
