@@ -4,7 +4,7 @@
 Inspired by [gulp-react](https://github.com/sindresorhus/gulp-react/blob/master/index.js)
 
 ##Motivation
-I don't like write html in js file,so i build the gulp.
+I don't like write html in js file,so i build this gulp.
 
 ## Install
 
