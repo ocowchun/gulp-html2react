@@ -34,7 +34,6 @@ module.exports = function(options) {
 
 			str = requires.join('\n') + '\nmodule.exports =function(){return (' + str + ');};';
 			str = reactDomPragma(str);
-			console.log(str)
 		}
 
 		try {
