@@ -7,7 +7,7 @@ it('should precompile React templates', function(cb) {
 	var stream = react2html();
 
 	stream.on('data', function(file) {
-		var expect_content = '/** @jsx React.DOM */\nvar React = require("react");\nmodule.exports =function(){return (React.DOM.div(null, "foo"));};'
+		var expect_content = 'var React = require("react");\nmodule.exports =function(){return (React.createElement("div", null, "foo"));};'
 		var file_content=file.contents.toString();
 		
 		assert.equal(file.relative, 'foo.js');
@@ -25,7 +25,7 @@ it('should precompile React templates with require comment', function(cb) {
 	var stream = react2html();
 
 	stream.on('data', function(file) {
-		var expect_content = '/** @jsx React.DOM */\nvar React = require("react");\n var card = require("./card"); \nmodule.exports =function(){return (React.DOM.p(null, "foo"));};'
+		var expect_content = 'var React = require("react");\n var card = require("./card"); \nmodule.exports =function(){return (React.createElement("p", null, "foo"));};'
 		var file_content=file.contents.toString();
 		
 		assert.equal(file.relative, 'foo.js');
