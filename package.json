@@ -15,7 +15,7 @@
   "repository": "ocowchun/gulp-html2react",
   "dependencies": {
     "gulp-util": "~3.0.1",
-    "react-tools": "~0.12.2",
+    "react-tools": "~0.13.2",
     "through2": "~0.6.3"
   },
   "devDependencies": {
